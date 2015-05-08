@@ -1,0 +1,25 @@
+# Thank you for downloading and running the programster mumble container. This will allow you to
+# quickly get a mumble server up and running. Note that your mumble server will persist across
+# reboots because all the "state" data is stored on the host at /mnt/mumble rather than in the
+# container.
+
+# Please note that this is primarily built upon someone elses work at:
+# https://github.com/overshard/docker-mumble
+# but I have made quite a few modifications to how this is built etc.
+
+# HOW TO BUILD YOUR OWN CONTAINER
+# To build your own container from scratch simply execute the following command on your host from
+# within this folder.
+# bash build.sh
+
+# HOW TO RUN THE CONTAINER
+# Copy and paste the following two commands into your docker host to run the container.
+# mkdir -p /mnt/mumble .
+# sudo docker run -d=true -p=64738:64738 -v=/mnt/mumble:/data programster/mumble-server /start
+
+# SUPERUSER PASSWORD
+# To find out what the "SuperUser" password is, you can find it at 
+# /mnt/mumble/superuser_password.txt
+
+# Thanks again!
+# Programster
